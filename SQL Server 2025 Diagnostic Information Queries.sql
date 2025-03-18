@@ -41,6 +41,7 @@
 --******************************************************************************
 
 -- Check the major product version to see if it is SQL Server 2025
+
 IF NOT EXISTS (SELECT * WHERE CONVERT(varchar(128), SERVERPROPERTY('ProductMajorVersion')) = '17')
 	BEGIN
 		DECLARE @ProductVersion varchar(128) = CONVERT(varchar(128), SERVERPROPERTY('ProductVersion'));
